@@ -4,9 +4,6 @@
   }
 }
 @media screen and (max-width: 480px) {
-  .cal__container {
-    height: 78vh;
-  }
   .cal__container .cal__header h3 {
     font-size: 16px;
   }

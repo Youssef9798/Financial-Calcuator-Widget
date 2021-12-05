@@ -47,7 +47,7 @@ const lifetimeResult = document.querySelector('#lifetime_result');
  * calculation Funactions
  */
 
- btns.forEach(button => {
+ btns.forEach(function(button){
    button.addEventListener('click', function(e){
      e.preventDefault();
     //  brandResultContainer.classList.add('fadeOut')

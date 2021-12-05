@@ -14,7 +14,7 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(45deg, #5584AC, #95D1CC);
+  background: linear-gradient(45deg, #5584ac, #95d1cc);
 }
 
 .title {
@@ -36,36 +36,38 @@ body {
 }
 
 .cal__container {
-  display: flex;
   flex-direction: row;
-  height: 80vh;
-  margin: 15px;
+  height: 90vh;
+  margin-top: 30px;
   overflow: auto;
   border-radius: 10px;
-  right: 0;
   background: #fff;
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
-  top: 0;
+  box-shadow: 2px -10px 10px 0px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  border-bottom: 0;
   justify-content: center;
   align-items: center;
-  padding: 25px 0;
+  padding: 25px 25px 0 25px;
   flex-wrap: wrap;
   opacity: 0;
-  position: fixed;
   display: none;
   transition: 300ms;
+  box-sizing: content-box;
 }
 .cal__container::-webkit-scrollbar {
   width: 10px;
+  border-top-right-radius: 12px;
 }
 .cal__container::-webkit-scrollbar-track {
   background: #f1f1f1;
+  border-top-right-radius: 12px;
 }
 .cal__container::-webkit-scrollbar-thumb {
-  background: #22577E;
+  background: #22577e;
+  border-top-right-radius: 12px;
 }
 .cal__container::-webkit-scrollbar-thumb:hover {
-  background: #5584AC;
+  background: #5584ac;
 }
 .cal__container .cal__header {
   display: flex;
@@ -74,7 +76,7 @@ body {
 .cal__container .cal__header h3 {
   text-align: center;
   padding: 12px 0;
-  color: #5584AC;
+  color: #5584ac;
   text-transform: capitalize;
 }
 .cal__container .cal__header .form__container {
@@ -92,14 +94,14 @@ body {
   font-weight: 600;
   font-size: 15px;
   padding: 5px 15px;
-  color: #22577E;
+  color: #22577e;
 }
 .cal__container .cal__header .form__container .form__row input {
   padding: 5px 15px;
   width: 50%;
   outline: none;
   border: 0;
-  border-bottom: 1px solid #5584AC;
+  border-bottom: 1px solid #5584ac;
 }
 .cal__container .cal__header .form__container .form__row input::-webkit-outer-spin-button, .cal__container .cal__header .form__container .form__row input::-webkit-inner-spin-button {
   appearance: none;
@@ -115,7 +117,7 @@ body {
 .cal__container .cal__header .brands__container h3 {
   text-align: center;
   padding: 12px 0;
-  color: #5584AC;
+  color: #5584ac;
   text-transform: capitalize;
 }
 .cal__container .cal__header .brands__container .brand_btns__container {
@@ -143,13 +145,13 @@ body {
   transition: 300ms;
 }
 .cal__container .cal__header .brands__container .brand_btns__container button:hover {
-  color: #22577E;
+  color: #22577e;
   transition: 300ms;
 }
 .cal__container .cal__header .brands__container .brand_btns__container button.active {
   text-transform: uppercase;
-  color: #22577E;
-  border-color: #22577E;
+  color: #22577e;
+  border-color: #22577e;
 }
 .cal__container .cal__body {
   padding: 20px 0;
@@ -183,7 +185,7 @@ body {
   font-family: ubuntu_medium;
 }
 .cal__container .cal__body .result__container .brand_result__container .progress_bar {
-  background-color: #95D1CC;
+  background-color: #95d1cc;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   margin: 15px;
@@ -191,8 +193,8 @@ body {
   width: 220px;
 }
 .cal__container .cal__body .result__container .brand_result__container .progress_bar .progress {
-  background: -webkit-linear-gradient(to right, #777777, #5584AC);
-  background: linear-gradient(to right, #777777, #5584AC);
+  background: -webkit-linear-gradient(to right, #777777, #5584ac);
+  background: linear-gradient(to right, #777777, #5584ac);
   border-radius: 3px;
   height: 12px;
   width: 100%;
@@ -265,7 +267,7 @@ body {
   font-size: 22px;
 }
 .cal__container .cal__body .result__container .extra_rewards__container .calculated_result_container .progress_bar {
-  background-color: #95D1CC;
+  background-color: #95d1cc;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   margin: 20px 0;
@@ -279,19 +281,23 @@ body {
 }
 
 .widget_container {
-  display: flex;
   position: fixed;
   bottom: 0;
   right: 0;
+  display: flex;
   flex-direction: column;
+  justify-content: right;
+  align-items: flex-end;
   color: #fff;
   margin: 15px;
 }
 .widget_container .btn_container {
-  padding: 10px 0;
+  padding: 0px 0;
+  height: 10vh;
+  margin-top: 15px;
 }
 .widget_container .btn_container .widget_btn {
-  background: #22577E;
+  background: #22577e;
   border-radius: 50px;
   padding: 15px 25px;
   cursor: pointer;
@@ -302,7 +308,7 @@ body {
   width: fit-content;
 }
 .widget_container .btn_container .widget_btn.active {
-  color: #22577E;
+  color: #22577e;
   border-radius: 0;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 10px;
