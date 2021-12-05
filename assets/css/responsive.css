@@ -1,0 +1,57 @@
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cal__container {
+    height: 78vh;
+  }
+  .cal__container .cal__header h3 {
+    font-size: 16px;
+  }
+  .cal__container .cal__header .form__container .form__row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .cal__container .cal__header .form__container .form__row label {
+    width: 100%;
+  }
+  .cal__container .cal__header .form__container .form__row input {
+    width: 100%;
+  }
+  .cal__container .cal__header .brands__container h3 {
+    font-size: 16px;
+  }
+  .cal__container .cal__header .brands__container .brand_btns__container {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .cal__container .cal__header .brands__container .brand_btns__container button {
+    width: 100%;
+  }
+  .cal__container .cal__body .result__container .brand_result__container {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+  .cal__container .cal__body .result__container .extra_rewards__container .card_container .left {
+    display: none;
+  }
+  .cal__container .cal__body .result__container .extra_rewards__container .card_container .right {
+    width: 100%;
+  }
+  .cal__container .cal__body .result__container .extra_rewards__container .calculated_result_container .c_row {
+    margin: 15px 0;
+  }
+  .cal__container .cal__body .result__container .extra_rewards__container .calculated_result_container #unlimited_result {
+    font-size: 15px;
+  }
+  .cal__container .cal__body .result__container .extra_rewards__container .calculated_result_container #lifetime_result {
+    font-size: 15px;
+  }
+  .cal__container .cal__body .result__container .extra_rewards__container .calculated_result_container .progress_bar {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */

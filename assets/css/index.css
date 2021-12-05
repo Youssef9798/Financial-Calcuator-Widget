@@ -149,6 +149,7 @@ body {
 .cal__container .cal__header .brands__container .brand_btns__container button.active {
   text-transform: uppercase;
   color: #22577E;
+  border-color: #22577E;
 }
 .cal__container .cal__body {
   padding: 20px 0;
