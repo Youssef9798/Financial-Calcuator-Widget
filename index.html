@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reward App</title>
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="stylesheet" href="/assets/css/all.min.css">
+</head>
+<body>
+  <h1 class="title">Reward APP - Calculator Widget</h1>
+  <div class="cal__container" id="cal__container">
+    <div class="cal__header">
+      <h3>Calculate your Rewards</h3>
+      <div class="form__container">
+        <div class="form__row">
+          <label for="vendor_bills">Vendor/Bills</label>
+          <input type="number" id="vendor_bills" placeholder="Enter a Number">
+        </div>
+        <div class="form__row">
+          <label for="medical_ad_spend">Medical/Ad Spend</label>
+          <input type="number" id="medical_ad_spend" placeholder="Enter a Number">
+        </div>
+        <div class="form__row">
+          <label for="corp_spend">Corp. Spend</label>
+          <input type="number" id="corp_spend" placeholder="Enter a Number">
+        </div>
+        <div class="form__row">
+          <label for="team_project">Team Project</label>
+          <input type="number" id="team_project" placeholder="Enter a Number">
+        </div>
+      </div>
+      <div class="brands__container">
+        <h3>Compare your rewards</h3>
+        <div class="brand_btns__container" id="brand_btns__container">
+          <button class="btn" id="brex">Brex</button>
+          <button class="btn" id="stripe">Stripe</button>
+          <button class="btn" id="amex">Amex</button>
+        </div>
+      </div>
+    </div>
+    <div class="cal__body">
+      <div class="result__container">
+        <div class="brand_result__container" id="brand_result__container">
+          <div class="offset_col"></div>
+          <p>
+            <span id="brand_name"></span>
+            Business Card 
+          </p>
+          <div class="progress_bar">
+            <div class="progress"></div>
+          </div>
+          <p id="calculated_result"></p>
+        </div>
+        <div class="extra_rewards__container">
+          <div class="card_container">
+            <div class="left">
+              <img src="assets/imgs/assets-images-site-preferred-rewards-learning-about-preferred-rewards-travel-rewards-card-CSX5d9aae99.jpg" alt="">
+            </div>
+            <div class="right">
+              <p>Unlimited Rewards</p>
+              <p class="bold">Lifetime Rewards</p>
+            </div>
+          </div>
+          <div class="calculated_result_container" id="calculated_result_container">
+            <div class="c_row" id="unlimited_p">
+              <div class="progress_bar">
+                <div class="progress" id="unlimited_progress"></div>
+              </div>
+              <span id="unlimited_result"></span>
+            </div>
+            <div class="c_row" id="lifetime_p">
+              <div class="progress_bar">
+                <div class="progress" id="lifetime_progress"></div>
+              </div>
+              <span id="lifetime_result"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="widget_container" id="widget_container">
+    <div class="btn_container">
+      <a class="widget_btn" id="widget_btn"><i class="fas fa-calculator icon"></i> Financial Calculator </a>
+    </div>
+  </div>
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/all.min.js"></script>
+</body>
+</html>

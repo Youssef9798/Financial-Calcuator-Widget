@@ -1,0 +1,315 @@
+@font-face {
+  font-family: ubuntu_light;
+  src: url(../fonts/Ubuntu-Light.ttf);
+}
+@font-face {
+  font-family: ubuntu_medium;
+  src: url(../fonts/Ubuntu-Medium.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: ubuntu_light;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(45deg, #5584AC, #95D1CC);
+}
+
+.title {
+  text-align: center;
+  font-size: 50px;
+  padding: 85px 0;
+  color: #fff;
+  font-family: ubuntu_medium;
+}
+
+.fadeIn {
+  opacity: 1 !important;
+  transition: 300ms !important;
+}
+
+.fadeOut {
+  opacity: 0 !important;
+  transition: 300ms;
+}
+
+.cal__container {
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  margin: 15px;
+  overflow: auto;
+  border-radius: 10px;
+  right: 0;
+  background: #fff;
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+  flex-wrap: wrap;
+  opacity: 0;
+  position: fixed;
+  display: none;
+  transition: 300ms;
+}
+.cal__container::-webkit-scrollbar {
+  width: 10px;
+}
+.cal__container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.cal__container::-webkit-scrollbar-thumb {
+  background: #22577E;
+}
+.cal__container::-webkit-scrollbar-thumb:hover {
+  background: #5584AC;
+}
+.cal__container .cal__header {
+  display: flex;
+  flex-direction: column;
+}
+.cal__container .cal__header h3 {
+  text-align: center;
+  padding: 12px 0;
+  color: #5584AC;
+  text-transform: capitalize;
+}
+.cal__container .cal__header .form__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cal__container .cal__header .form__container .form__row {
+  width: 100%;
+  display: flex;
+  margin: 10px 0;
+}
+.cal__container .cal__header .form__container .form__row label {
+  width: 50%;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 5px 15px;
+  color: #22577E;
+}
+.cal__container .cal__header .form__container .form__row input {
+  padding: 5px 15px;
+  width: 50%;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #5584AC;
+}
+.cal__container .cal__header .form__container .form__row input::-webkit-outer-spin-button, .cal__container .cal__header .form__container .form__row input::-webkit-inner-spin-button {
+  appearance: none;
+}
+.cal__container .cal__header .brands__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+}
+.cal__container .cal__header .brands__container h3 {
+  text-align: center;
+  padding: 12px 0;
+  color: #5584AC;
+  text-transform: capitalize;
+}
+.cal__container .cal__header .brands__container .brand_btns__container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.cal__container .cal__header .brands__container .brand_btns__container button {
+  flex: 1 0 0;
+  margin: 5px 5px;
+  background: #fff;
+  color: #777777;
+  font-family: ubuntu_medium;
+  padding: 12px 20px;
+  text-transform: capitalize;
+  border: 1px solid #ccc;
+  outline: none;
+  font-style: italic;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.2);
+  transition: 300ms;
+}
+.cal__container .cal__header .brands__container .brand_btns__container button:hover {
+  color: #22577E;
+  transition: 300ms;
+}
+.cal__container .cal__header .brands__container .brand_btns__container button.active {
+  text-transform: uppercase;
+  color: #22577E;
+}
+.cal__container .cal__body {
+  padding: 20px 0;
+  width: 100%;
+}
+.cal__container .cal__body .result__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cal__container .cal__body .result__container .brand_result__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0;
+  opacity: 0;
+  transition: 300ms;
+}
+.cal__container .cal__body .result__container .brand_result__container .offset_col {
+  width: 80px;
+}
+.cal__container .cal__body .result__container .brand_result__container p {
+  font-size: 14px;
+  color: #777777;
+}
+.cal__container .cal__body .result__container .brand_result__container #brand_name {
+  text-transform: uppercase;
+  margin-left: 10px;
+  font-family: ubuntu_medium;
+}
+.cal__container .cal__body .result__container .brand_result__container .progress_bar {
+  background-color: #95D1CC;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin: 15px;
+  height: 12px;
+  width: 220px;
+}
+.cal__container .cal__body .result__container .brand_result__container .progress_bar .progress {
+  background: -webkit-linear-gradient(to right, #777777, #5584AC);
+  background: linear-gradient(to right, #777777, #5584AC);
+  border-radius: 3px;
+  height: 12px;
+  width: 100%;
+  transition: width 0.5s ease-in;
+}
+.cal__container .cal__body .result__container .extra_rewards__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cal__container .cal__body .result__container .extra_rewards__container .card_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 1px solid #ccc;
+  padding: 10px 10px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.2);
+}
+.cal__container .cal__body .result__container .extra_rewards__container .card_container .left {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cal__container .cal__body .result__container .extra_rewards__container .card_container .left img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+  height: 80px;
+}
+.cal__container .cal__body .result__container .extra_rewards__container .card_container .right {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.cal__container .cal__body .result__container .extra_rewards__container .card_container .right p {
+  width: 100%;
+  flex: 1 0 0;
+  text-align: right;
+  margin: 15px 0;
+  font-size: 14px;
+  color: #777777;
+}
+.cal__container .cal__body .result__container .extra_rewards__container .card_container .right .bold {
+  font-weight: 600;
+}
+.cal__container .cal__body .result__container .extra_rewards__container .calculated_result_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cal__container .cal__body .result__container .extra_rewards__container .calculated_result_container .c_row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.cal__container .cal__body .result__container .extra_rewards__container .calculated_result_container span {
+  color: #777777;
+  padding-left: 15px;
+  opacity: 0;
+  transition: 300ms;
+}
+.cal__container .cal__body .result__container .extra_rewards__container .calculated_result_container #unlimited_result {
+  font-size: 18px;
+}
+.cal__container .cal__body .result__container .extra_rewards__container .calculated_result_container #lifetime_result {
+  font-size: 22px;
+}
+.cal__container .cal__body .result__container .extra_rewards__container .calculated_result_container .progress_bar {
+  background-color: #95D1CC;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+  height: 12px;
+  width: 220px;
+}
+.cal__container.w_active {
+  display: flex !important;
+  opacity: 1 !important;
+  transition: 300ms;
+}
+
+.widget_container {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  flex-direction: column;
+  color: #fff;
+  margin: 15px;
+}
+.widget_container .btn_container {
+  padding: 10px 0;
+}
+.widget_container .btn_container .widget_btn {
+  background: #22577E;
+  border-radius: 50px;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: 300ms;
+  color: #fff;
+  box-shadow: 2px 8px 10px 0px rgba(0, 0, 0, 0.2);
+  border-bottom-right-radius: 0px;
+  width: fit-content;
+}
+.widget_container .btn_container .widget_btn.active {
+  color: #22577E;
+  border-radius: 0;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  background: #fff;
+  transition: 300ms;
+}
+.widget_container .btn_container .icon {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */
